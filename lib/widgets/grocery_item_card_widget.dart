@@ -64,7 +64,7 @@ class GroceryItemCardWidget extends StatelessWidget {
             Row(
               children: [
                 AppText(
-                  text: "\$${item.promoPrice.toStringAsFixed(2)}",
+                  text: item.promoPrice,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
@@ -78,7 +78,7 @@ class GroceryItemCardWidget extends StatelessWidget {
 
   Widget imageWidget() {
     return Container(
-      child: Image.network(item.img),
+      child: Image.network(item.image),
     );
   }
 

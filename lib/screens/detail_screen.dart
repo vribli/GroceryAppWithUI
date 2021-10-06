@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'request.dart';
+import 'package:grocery_app/screens/results_list.dart';
 
 class DetailScreen extends StatefulWidget {
   final String imagePath;
@@ -182,7 +183,18 @@ class _DetailScreenState extends State<DetailScreen> {
                           physics: BouncingScrollPhysics(),
                           itemCount: _listStrings.length,
                           itemBuilder: (context, index) =>
-                              Text(_listStrings[index]),
+                              ListTile(
+
+                                title: Text(_listStrings[index]),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => FilterListPage(_listStrings[index]),
+                                    ),
+                                  );
+                                },
+                              )
                         )
                             : Container(),
                       ),

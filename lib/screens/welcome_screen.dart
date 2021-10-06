@@ -9,6 +9,7 @@ import 'home/home_screen.dart';
 import 'explore_screen.dart';
 import 'product_details/product_details_screen.dart';
 import 'package:grocery_app/models/results.dart';
+import 'package:grocery_app/screens/results_list.dart';
 
 class WelcomeScreen extends StatelessWidget {
   final String imagePath = "assets/images/welcome_image.png";
@@ -135,13 +136,12 @@ class WelcomeScreen extends StatelessWidget {
 
       ],
     );
-
   }
 
   void onTextClicked(BuildContext context) {
     Navigator.of(context).pushReplacement(new MaterialPageRoute(
       builder: (BuildContext context) {
-        return HomeScreen();
+        return FilterListPage('');
       },
     ));
   }
@@ -157,12 +157,12 @@ class WelcomeScreen extends StatelessWidget {
   final temp = ApiSearchResult(
     availability : 'available',
     category: 'Alcohol',
-    img : "https://ssecomm.s3-ap-southeast-1.amazonaws.com/products/sm/gsBKSTrP7e7OkGoMsWliG9cLmKIwgB.0.jpg",
+    image : "https://ssecomm.s3-ap-southeast-1.amazonaws.com/products/sm/gsBKSTrP7e7OkGoMsWliG9cLmKIwgB.0.jpg",
     name : 'Beer',
-    previousPrice : 3.00,
-    productPrice : 3.00,
-    promoPrice : 1.50,
-    rating : 5.00,
+    previousPrice : "3.00",
+    productPrice : "3.00",
+    promoPrice : "1.50",
+    rating : "5.00",
     size : '3 x 400 ml',
     supermarket : 'Sheng Siong',
     url : 'google.com'

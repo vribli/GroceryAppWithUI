@@ -21,6 +21,7 @@ dependencies:
   camera: ^0.9.4
   google_ml_kit: ^0.7.2
   flutter_rating_bar: 4.0.0
+  json_annotation: ^4.1.0
 
 dev_dependencies:
   flutter_test:
